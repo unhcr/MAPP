@@ -1,0 +1,17 @@
+{ 
+"back":"Back",
+"english":"English",
+"french":"Français",
+"arabic":"عربي",
+"close":"Close",
+"selectlanguage":"Select language:",
+"mi1":"High Commissioner",
+"mi2":"UNHCR Essentials",
+"mi3":"About",
+"mi4":"Donate",
+"mi4link":"http://donate.unhcr.org",
+"loading":"Loading...",
+"share":"Share",
+"loggedin":"Logged in as",
+"logout":"Log out"
+}

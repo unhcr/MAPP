@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+      <link rel="stylesheet" href="css/idangerous.swiper.css">
+      <link rel="stylesheet" href="css/jquery.mobile-1.4.2.mod.css">
+      <link rel="stylesheet" href="css/photoswipe.css">      
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
+      <title>UNHCR MAPP</title>
+  <style>
+
+</style>        
+    </head>
+    <body onload="onLoad()">
+    
+
+
+    <div data-role="page" id="panelMain" data-theme="b">
+      <div data-role="header" data-position="fixed"  data-theme="b">  
+        <img src="img/hcrlogo.png" class="hcrlogo">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
+          <a href="#" id="reload" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-notext ui-icon-refresh">Reload</a>  
+          <a href="#panelSettings" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-notext ui-icon-bars">Options</a>        
+        </div>
+      </div>
+
+      <div role="main" class="ui-content" id="homePage">
+      </div>
+    <div data-role="panel" data-position="right" data-display="push" id="panelSettings">
+      
+      <form id="frmSettings">
+          <fieldset id="languageSettings" data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <legend>Select language:</legend>
+              <input name="lcode" id="radio-EN" value="EN" type="radio" checked="checked">
+              <label for="radio-EN" id="radio-EN-label">English</label>
+              <input name="lcode" id="radio-FR" value="FR" type="radio">
+              <label for="radio-FR" id="radio-FR-label">Français</label>
+              <input name="lcode" id="radio-AR" value="AR" type="radio">
+              <label for="radio-AR" id="radio-AR-label">عربي</label>          
+          </fieldset>
+      </form>
+
+      <p><span id="loggedin">Logged in as</span> &laquo; <span id="loggeduser"></span> &raquo;<br><a href="#" id="btnLogout" data-rel="close" ><span id="logout">Log out</span></a>  
+      </p>
+
+      <a href="#panelMain" data-rel="close" data-theme="b" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left close">Close</a>        
+      <p id='version'>Version 1.0</p>  
+    </div><!--panelSettings-->          
+    </div><!--panelMain-->
+
+
+
+    <div data-role="page" data-theme="b" id="panelDocview" >
+      <div data-role="header" data-position="fixed"  data-theme="b">
+        <a href="#" data-corners="false" data-direction="reverse" data-rel="back" data-icon="back" xdata-iconpos="notext" class="back">Back</a>
+        <h1>Latest News</h1>
+        <a href="#social" id="docviewShare" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-notext ui-icon-action">Options</a>        
+      </div>
+      <div role="main" class="ui-content">    
+      </div>
+    </div><!--panelDocview-->
+
+   
+    <div data-role="page" data-position="right" data-theme="a" id="panelVideo" >
+      <div data-role="header" data-position="fixed"  data-theme="a">
+        <h1>MAPP</h1>
+        <a data-direction="reverse" data-rel="back" data-icon="back" data-iconpos="notext" id="panelVideoBack" class="back">Back</a>
+      </div>
+      <div role="main" class="ui-content">    
+      </div>               
+    </div><!--panelVideo-->    
+
+    <div data-role="page" data-position="right" data-theme="a" id="panelGallery" class="gallery-page">
+      <div data-role="header" data-position="fixed"  data-theme="a">
+        <h1>MAPP</h1>
+        <a data-direction="reverse" data-rel="back" data-icon="back" data-iconpos="notext">Back</a>
+      </div>
+      <div role="main" class="ui-content">    
+      </div>               
+    </div><!--panelGallery-->        
+
+
+    <div data-role="page" id="panelLogin" data-theme="b">
+      <div data-role="header" data-position="fixed"  data-theme="b">  
+        <img src="img/hcrlogo.png" class="hcrlogo">
+      </div>
+      <div role="main" class="ui-content" id="login" style="padding-top:30px;">
+
+          <form data-theme="a">
+              <fieldset data-role="controlgroup"  data-theme="a">
+                  <legend>The MAPP is a UNHCR internal app. Enter your standard UNHCR username and password to login.</legend>
+                  <label for="text-basic">Username:</label>
+                  <input name="username" id="username" value="" type="text"> 
+                  <label for="password">Password:</label>
+                  <input name="password" id="password" value="" type="password">       
+              </fieldset>
+            <a href="" id="btnLogin" data-rel="login" data-theme="b" class="ui-btn ui-btn-inline ui-icon-user ui-btn-icon-left">Login</a>               
+          </form>
+
+      </div>
+    </div>
+        
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="video.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>    
+    <script type="text/javascript" src="js/klass.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/idangerous.swiper-2.4.3.min.js"></script>
+    <script type="text/javascript" src="js/code.photoswipe.jquery-3.0.5.min.js"></script> 
+    <script type="text/javascript" src="PushNotification.js"></script>     
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      //app.initialize();
+      function onLoad() {
+          onLoadEvents();
+      }
+
+    </script>
+</body>
+</html>

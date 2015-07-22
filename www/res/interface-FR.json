@@ -1,0 +1,17 @@
+{ 
+"back":"Retour",
+"english":"English",
+"french":"Français",
+"arabic":"عربي",
+"close":"Fermer",
+"selectlanguage":"Sélectionnez la langue:",
+"mi1":"Le Haut Commissaire",
+"mi2":"Les Essentiels",
+"mi3":"À propos du HCR",
+"mi4":"Faire un don",
+"mi4link":"http://donate.unhcr.org/fr",
+"loading":"Chargement...",
+"share":"Partager",
+"loggedin":"Connecté en tant que",
+"logout":"Déconnecter"
+}
